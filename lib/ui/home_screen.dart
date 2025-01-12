@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                       highlightColor: Colors.transparent,
                       splashColor: Colors.transparent,
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const AttendScreeen()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const AttendScreen()));
                       },
                       child: const Column(
                         children: [
@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            "Absen Kehadiran",
+                            "Attendance Record",
                             style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -70,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            "Cuti / Izin",
+                            "Permission",
                             style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            "Riwayat Absensi",
+                            "Attendande History",
                             style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -119,27 +119,27 @@ class HomeScreen extends StatelessWidget {
       context: context,
       builder: (context) =>
           AlertDialog(
-            title: const Text("INFO",
+            title: const Text("INFORMATION",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
             ),
-            content: const Text("Apa Anda ingin keluar dari aplikasi?",
+            content: const Text("Do you want to exit the app?",
                 style: TextStyle(color: Colors.black, fontSize: 16)),
             actions: [
               TextButton(
                 onPressed: () => Navigator.of(context).pop(false),
-                child: const Text("Batal",
+                child: const Text("Cancel",
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 14)),
               ),
               TextButton(
                 onPressed: () => SystemNavigator.pop(),
-                child: const Text("Ya",
+                child: const Text("Yes",
                     style: TextStyle(
-                        color: Colors.pinkAccent,
+                        color: Colors.blueAccent,
                         fontSize: 14)),
               ),
             ],
